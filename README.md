@@ -31,7 +31,7 @@
 1. Склонируйте репозиторий:
 
    ```bash
-   git clone https://your-repository-url.git
+   git clone https://github.com/Dariafable/3sep-tt
    ```
 
 2. Установите зависимости:
