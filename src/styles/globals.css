@@ -1,0 +1,47 @@
+:root {
+  --max-width: 800px;
+  --border-radius: 8px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
+    "Courier New", monospace;
+
+  --color-natural-white: #f3f4f6;
+  --color-light-gray: rgba(156, 163, 175, 1);
+  --color-dark-gray: rgba(107, 114, 128, 1);
+  --color-gray: #6b7280;
+  --color-blue: #3f83f8;
+  --color-black: #111928;
+  --color-error-red: #ff4d4f;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-black);
+  background-color: var(--color-natural-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

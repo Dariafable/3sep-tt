@@ -1,0 +1,44 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.select {
+  padding: 9px 16px;
+  padding-right: 36px;
+  width: 100%;
+  appearance: none;
+
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-natural-white);
+  outline: none;
+
+  font-size: 14px;
+  line-height: 22px;
+  font-family: inherit;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: var(--color-natural-white);
+  color: var(--color-light-gray);
+  cursor: not-allowed;
+}
+
+.label::after {
+  content: "";
+  font-size: 12px;
+  position: absolute;
+  right: 16px;
+  top: 70%;
+  z-index: 4;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid var(--color-dark-gray);
+  border-bottom: 1px solid var(--color-dark-gray);
+  pointer-events: none;
+}

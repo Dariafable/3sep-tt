@@ -1,0 +1,29 @@
+.button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: var(--border-radius);
+
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.disabled {
+  background-color: var(--color-natural-white);
+  color: var(--color-dark-gray);
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: var(--color-blue);
+}
