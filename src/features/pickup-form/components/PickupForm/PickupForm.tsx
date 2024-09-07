@@ -44,11 +44,12 @@ const PickupForm: React.FC = () => {
     setOrders,
   } = usePickupStore();
 
-  const { data: pointsData, isLoading: isPointsLoading } = usePoints();
+  const { data: pointsData, isLoading: isPointsLoading, error: pointsError } = usePoints();
   const { data: datesData } = useDates(selectedPoint?.id || null);
-  const { data: ordersData, isLoading: isOrdersLoading } = useOrders();
+  const { data: ordersData, isLoading: isOrdersLoading, error: ordersError } = useOrders();
 
-  const isLoadingData = isPointsLoading && isOrdersLoading;
+  const isLoadingData = isPointsLoading || isOrdersLoading;
+  const isError = pointsError || ordersError;
 
   const handlePointsData = (data: IPickupPoint[]) => {
     setPoints(data);
@@ -155,6 +156,7 @@ const PickupForm: React.FC = () => {
   };
 
   if (isLoadingData) return <div>Загрузка формы...</div>;
+  if (isError) return <div>Произошла ошибка при загрузке данных</div>;
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
