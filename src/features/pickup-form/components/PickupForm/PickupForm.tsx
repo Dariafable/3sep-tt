@@ -48,7 +48,7 @@ const PickupForm: React.FC = () => {
   const { data: datesData } = useDates(selectedPoint?.id || null);
   const { data: ordersData, isLoading: isOrdersLoading } = useOrders();
 
-  const isLoadingData = isPointsLoading || isOrdersLoading;
+  const isLoadingData = isPointsLoading && isOrdersLoading;
 
   const handlePointsData = (data: IPickupPoint[]) => {
     setPoints(data);
