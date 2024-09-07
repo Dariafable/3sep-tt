@@ -10,7 +10,7 @@ import { findOrder } from "../../utils/helpers";
 
 import { usePickupStore } from "@shared/store";
 import { Button, InputField, Selector } from "@shared/ui";
-import { IRecipientOrder, IPickupPoint, IPickupAvailableDate } from "@shared/types";
+import { IRecipientOrder, IPickupPoint, IPickupAvailableDate, TAction } from "@shared/types";
 
 import styles from "./PickupForm.module.scss";
 
@@ -87,7 +87,7 @@ const PickupForm: React.FC = () => {
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    setValue: (value: string) => void,
+    setValue: TAction<string>,
     field?: "recipientName" | "orderNumber"
   ) => {
     setValue(event.target.value);
